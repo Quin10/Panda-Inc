@@ -1,0 +1,165 @@
+
+ 
+\documentclass[11pt]{article}
+\addtolength{\oddsidemargin}{-1.cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-2cm}
+\addtolength{\textheight}{3.5cm}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage[pdftex]{graphicx}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{cite}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+% define the title
+\author{Panda Inc}
+\title{Catura - Purchase Management System}
+\begin{document}
+\begin{titlepage}
+	
+	\begin{center}
+		% Upper part of the page         
+        \includegraphics[width=0.7\linewidth]{PandaInc_logo.jpg}\\[1cm] 
+		\textsc{\LARGE Panda Inc}\\[0.3cm]
+		% Title
+		\rule{\linewidth}{0.5mm} \\[1cm]
+		{ \huge \bfseries  System Requirements Specification}\\[0.5cm]
+		\rule{\linewidth}{0.5mm} \\[1cm] 		
+  
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Quinton {Swanepoel}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				15245510
+			\end{flushright}
+		\end{minipage}
+
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+            	\emph{} \\
+				Azhar {Patel}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				15052592
+			\end{flushright}
+		\end{minipage}
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Tshepo Macebo {Malesela}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				14211582
+			\end{flushright}
+		\end{minipage}
+
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Monkeli Fred {Dilapisho}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				15074260
+			\end{flushright}
+		\end{minipage}
+        
+        \begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Keaton {Pennels}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				14373018
+			\end{flushright}
+		\end{minipage}
+		
+		\rule{\linewidth}{0.5mm} \\[1cm] 
+		\textsc{\Large Stakeholders}\\[1cm]	
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Catura:
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				Diederik Mostert
+			\end{flushright}
+		\end{minipage}
+
+		
+	\end{center}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\section{Introduction}
+The section gives an overall description and overview of the system and the SRS document. The purpose for the document will be described and helpers such as abbreviations and definitions will be provided.
+\subsection{Purpose}
+The purpose of this software requirements specification document is to give detailed descriptions, the systems requirements and the systems constraints for the Momentum Multiply Active days application. The application interfaces, behaviors and interactions with other applications which includes the mobile application, server communication and the web interface.
+\subsection{Project Scope}
+The main purpose of this system is monitor or track Multiply members when they visit Multiply partners or particular events or areas. The system will keep track of where and how many times a user has visited these locations and report the data back to the server where it will be stored. Based on the time spent at these locations the user will receive points called 'ActiveDays'. These points will be summed up for a reward policy for the user and the more 'ActiveDays' the better they chances of getting more rewards. 
+\subsection{Definitions,Acronyms and Abbreviations}
+\textbf{R1,R2, R\textit{N}}specifies a requirement \\
+\textbf{UC1,UC2, UC\textit{N}}specifies a use case \\
+\textbf{User} - A Momentum Multiply registered account holder\\
+\textbf{Administrator} - A user that monitors the system and does maintenance too.
+\subsection{References}
+[1] David C. Kung "Object-Oriented Software Engineering, An Agile Unified Methodology", 2014.
+\subsection{Overview}
+\section{Overall Description}
+In this section we give an overview of the system and also provide some detail on how the system interacts with the components or subsystems in uses. This section will also describe basic functionality that the system will provide. The use of the system by the different types of users mainly users, administrators, and partners.     
+\subsection{Product Perspective}
+The Momentum Multiply ActiveDays system consists mainly of four parts, these are the mobile application, the administrator web interface, the beacons and the cloud based server. The mobile application will be used by the users of the system to monitor their time and attendance at Multiply partners locations. The web interface will be used by the administrator to manage the users, partner, locations and number of beacons at the location, and other functionality. The beacons will be used to register users to a location and monitor the time they spend at that particular location. The server will be used to grant access to the application for the users, it also waits for user data from the users mobile application to register where and how long the user was at a location.\\\\
+The mobile application will alert the user when they enter a location with a Multiply partner, in the background the application will monitor the time spent by the user at the particular locations. The mobile application uses bluetooth to communicate with the beacons and when the device is within range the user should get an alert informing them of the Multiply partner location they have entered. The mobile application will also communicate with the server to report the time and the location visited. \\\\
+The beacons will be be registered to a Multiply partner and will communicate with the mobile application of the user. Each beacon will have a unique identification to differentiate the different locations and the partner. Since Multiply partner may have more than one beacon registered to them, an identification method for the partner will be on the beacons.\\\\
+\subsubsection{System Interfaces}
+\subsubsection{User Interfaces}
+\subsubsection{Hardware Interfaces}
+\subsubsection{Software Interfaces}
+\subsubsection{Communication Interface}
+\subsubsection{Memory}
+\subsubsection{Operations}
+\subsubsection{Site Adaptations Requirements}
+\subsection{Product Functions}
+\subsection{User Characteristics}
+\subsection{Constraints}
+\subsection{Assumptions and Dependencies}
+\section{Specific Requirements}
+\subsection{External Interface Requirements}
+\subsection{Functional Requirements}
+\textbf{R1}Only users that are registered to the Momentum Multiply database can have access to the application.
+\subsection{Performance Requirements}
+\subsection{Design Constraints}
+\subsection{Software System Attributes}
+\subsection{Other Requirements}
+\end{document}
