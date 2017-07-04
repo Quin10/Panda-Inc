@@ -41,3 +41,49 @@ import java.io.*;
 	        BufferedReader in = null; 
 	        PrintWriter out = null; 
 	        Scanner input = null ;
+		    
+		try 
+	        { 
+	            // Create the streams to send and receive information 
+	            in = new BufferedReader(new InputStreamReader(s.getInputStream())); 
+	            out = new PrintWriter(new OutputStreamWriter(s.getOutputStream())); 
+	            input = new Scanner(System.in) ;
+	            // Since this is the client, we will initiate the talking. 
+	            // Send a string data and flush 
+	            out.println("What is going on Server?"); 
+	            out.flush(); 
+	            String response = "" ;
+	            
+	            
+	            while(response.equalsIgnoreCase("quit") == false)
+	            {
+		            // Receive the reply. 
+		            System.out.println("Server: " + in.readLine()); 
+		            response = input.nextLine() ;
+		            // Send the special string to tell server to quit. 
+		            out.println(response); 
+		            out.flush(); 
+	            }
+	        } 
+	        catch(IOException ioe) 
+	        { 
+	            System.out.println("Exception during communication. Server probably closed connection."); 
+	        } 
+	        finally 
+	        { 
+	            try 
+	            { 
+	                // Close the input and output streams 
+	                out.close(); 
+	                in.close(); 
+	                input.close(); 
+	                // Close the socket before quitting 
+	                s.close(); 
+	            } 
+	            catch(Exception e) 
+	            { 
+	                e.printStackTrace(); 
+	            }                
+	        }        
+	    } 
+	}
