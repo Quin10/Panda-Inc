@@ -37,3 +37,40 @@ public class MultiThreadedServer implements Runnable{
         }
         System.out.println("Server Stopped.") ;
     }
+    
+    
+    private synchronized boolean isStopped() {
+        return this.isStopped;
+    }
+
+    public synchronized void stop(){
+        this.isStopped = true;
+        try {
+            this.serverSocket.close();
+        } catch (IOException e) {
+            throw new RuntimeException("Error closing server", e);
+        }
+    }
+
+    private void openServerSocket() {
+        try {
+            this.serverSocket = new ServerSocket(this.serverPort);
+        } catch (IOException e) {
+            throw new RuntimeException("Cannot open port 8080", e);
+        }
+    }
+    
+    public static void main(String[] args) {
+    	MultiThreadedServer server = new MultiThreadedServer(9000);
+    	new Thread(server).start();
+
+    	try {
+    	    Thread.sleep(20 * 1000);
+    	} catch (InterruptedException e) {
+    	    e.printStackTrace();
+    	}
+    	System.out.println("Stopping Server");
+    	server.stop();
+	}
+
+}
