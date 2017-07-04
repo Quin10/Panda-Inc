@@ -2,7 +2,7 @@
 
 Momentum - Multiply ActiveDayz
 
-![logo](https://github.com/Quin10/Panda-Inc/blob/master/documentation/tenders/Images/PandaInc_logo.jpg?raw=true" alt="team logo)
+![logo](https://https://raw.githubusercontent.com/Quin10/Panda-Inc/blob/master/documentation/tenders/Images/PandaInc_logo.jpg)
 # COS 301 - Panda Inc
 
 ## The Software Engineers
