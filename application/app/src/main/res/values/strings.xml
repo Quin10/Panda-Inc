@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">ActiveDayz</string>
+    <string name="get_activedayz">Get ActiveDayz!</string>
+    <string name="community">Community</string>
+    <string name="leaderboard">Leaderboards</string>
+    <string name="achievements">Achievements</string>
+    <string name="achievementShare">Achievements (Tap to Share)</string>
+    <string name="coms">Communities</string>
+    <string name="leaderboards">Leaderboards</string>
+    <string name="communities">Communities</string>
+    <string name="mycoms">My Communities</string>
+    <string name="create">Create a Community</string>
+    <string name="join">Join a Community</string>
+    <string name="invite">Invite Friends</string>
+    <string name="challenge">Challenge a Community</string>
+    <string name="drawer_open" />
+    <string name="drawer_close" />
 </resources>
