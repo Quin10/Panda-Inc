@@ -1,0 +1,203 @@
+
+ 
+\documentclass[11pt]{article}
+\addtolength{\oddsidemargin}{-1.cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-2cm}
+\addtolength{\textheight}{3.5cm}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage[pdftex]{graphicx}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{cite}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+% define the title
+\author{Panda Inc}
+\title{Catura - Purchase Management System}
+\begin{document}
+\begin{titlepage}
+	
+	\begin{center}
+		% Upper part of the page         
+        \includegraphics[width=0.7\linewidth]{PandaInc_logo.jpg}\\[1cm] 
+		\textsc{\LARGE Panda Inc}\\[0.3cm]
+		% Title
+		\rule{\linewidth}{0.5mm} \\[1cm]
+		{ \huge \bfseries  System Requirements Specification}\\[0.5cm]
+		\rule{\linewidth}{0.5mm} \\[1cm] 		
+  
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Quinton {Swanepoel}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				15245510
+			\end{flushright}
+		\end{minipage}
+
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+            	\emph{} \\
+				Azhar {Patel}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				15052592
+			\end{flushright}
+		\end{minipage}
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Tshepo Macebo {Malesela}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				14211582
+			\end{flushright}
+		\end{minipage}
+
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Monkeli Fred {Dilapisho}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				15074260
+			\end{flushright}
+		\end{minipage}
+        
+        \begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Keaton {Pennels}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				14373018
+			\end{flushright}
+		\end{minipage}
+		
+		\rule{\linewidth}{0.5mm} \\[1cm] 
+		\textsc{\Large Stakeholders}\\[1cm]	
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Catura:
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				Diederik Mostert
+			\end{flushright}
+		\end{minipage}
+
+		
+	\end{center}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\section{Introduction}
+The section gives an overall description and overview of the system and the SRS document. The purpose for the document will be described and helpers such as abbreviations and definitions will be provided.
+\subsection{Purpose}
+The purpose of this software requirements specification document is to give detailed descriptions, the systems requirements and the systems constraints for the Momentum Multiply Active days application. The application interfaces, behaviors and interactions with other applications which includes the mobile application, server communication and the web interface.
+\subsection{Project Scope}
+The main purpose of this system is monitor or track Multiply members when they visit Multiply partners or particular events or areas. The system will keep track of where and how many times a user has visited these locations and report the data back to the server where it will be stored. Based on the time spent at these locations the user will receive points called 'ActiveDays'. These points will be summed up for a reward policy for the user and the more 'ActiveDays' the better they chances of getting more rewards. 
+\subsection{Definitions,Acronyms and Abbreviations}
+\textbf{R1,R2, R\textit{N}}specifies a requirement \\
+\textbf{UC1,UC2, UC\textit{N}}specifies a use case \\
+\textbf{User} - A Momentum Multiply registered account holder\\
+\textbf{Administrator} - A user that monitors the system and does maintenance too.
+\subsection{References}
+[1] David C. Kung "Object-Oriented Software Engineering, An Agile Unified Methodology", 2014.
+\subsection{Overview}
+\section{Overall Description}
+In this section we give an overview of the system and also provide some detail on how the system interacts with the components or subsystems in uses. This section will also describe basic functionality that the system will provide. The use of the system by the different types of users mainly users, administrators, and partners.     
+\subsection{Product Perspective}
+The Momentum Multiply ActiveDays system consists mainly of four parts, these are the mobile application, the administrator web interface, the beacons and the cloud based server. The mobile application will be used by the users of the system to monitor their time and attendance at Multiply partners locations. The web interface will be used by the administrator to manage the users, partner, locations and number of beacons at the location, and other functionality. The beacons will be used to register users to a location and monitor the time they spend at that particular location. The server will be used to grant access to the application for the users, it also waits for user data from the users mobile application to register where and how long the user was at a location.\\\\
+The mobile application will alert the user when they enter a location with a Multiply partner, in the background the application will monitor the time spent by the user at the particular locations. The mobile application uses bluetooth to communicate with the beacons and when the device is within range the user should get an alert informing them of the Multiply partner location they have entered. The mobile application will also communicate with the server to report the time and the location visited. \\\\
+The beacons will be be registered to a Multiply partner and will communicate with the mobile application of the user. Each beacon will have a unique identification to differentiate the different locations and the partner. Since Multiply partner may have more than one beacon registered to them, an identification method for the partner will be on the beacons.\\\\
+\subsubsection{System Interfaces}
+\subsubsection{User Interfaces}
+The first thing a first-time user of the mobile application will see after opening the application is a login screen. If the user has not registered the application they should be able to do so on the login screen. For non-first-time users, the user will see a profile page.\\
+In the profile page, the user can view details of their activeDays and profile information. There will also be a sign-out option on the page if the user wants to log out.\\
+When a user enters a Multiply partners location, they should have some sort of alert or notification that when opened, the application will show the location visited and the partner visited and maybe some details of the location.
+There will be a login for the web application, it will be simple and ask for a user-name and password. Once an administrator has logged in, they will see have a drawer containing the available sections that they can select. These sections will relate to the user and beacon management settings. Depending on which section the administrator chooses the page will navigate to the section but the drawer will still be available.
+\subsubsection{Hardware Interfaces}
+The web application will not use any dedicated hardware therefore there is no hardware interface for the web application.The mobile application however does have a hardware interface, beacons are basically dedicated hardware devices to aid the mobile applications ability to detect location and presence. The mobile application will use the device's blue-tooth to connect to the beacons, the beacon devices will always be waiting for a connection and when the mobile device is in range, the connection should be established. For this to happen, the mobile devices blue-tooth has to be enable before entering the location of  Multiply partner, if not there will be no connection thus removing the system functionality.
+\subsubsection{Software Interfaces}
+The mobile application communicates with two entities, the cloud based server and the beacons. The mobile device communicates to the beacons to allow for the location of the device to be known and for how long the device is in the particular location. The beacons have a range which once a mobile device is within, the connection is established. The mobile application also communicates with the server to write data about the time spent at a particular location to the database, requests for user data and other data services relevant to the user from the database.
+The web interface communicate with the server to request database services to read, modify and create new data on users and beacons. 
+\subsubsection{Communication Interface}
+Communication between the various components of the system is very important. The web web interface will use HTTP/HTTPS protocol to communicate over the Internet. The mobile application will also use HTTP to communicate over the Internet. The mobile  application will also use blue-tooth to communicate with the beacons.
+\subsubsection{Memory}
+\subsubsection{Operations}
+\subsubsection{Site Adaptations Requirements}
+\subsection{Product Functions}
+\subsection{User Characteristics}
+There will be two main users that interact and communicate with the system, the mobile application users and the administrator users. Both of these users communicate and interact with the system in different ways, the mobile application users use the application to monitor the attendance at Multiply partner location, and see user data. The administrative user uses the web interface to perform beacon management and user management functions. These services include CRUD operations on both users and beacons.
+\subsection{Constraints}
+The mobile application is constrained by the time to check of the blue-tooth connection, as these will not be the same for each mobile device and therefore there might be seconds elapse from the calculated time spent at a location.\\
+The mobile application will have to be able to communicate with the server meaning there has to be a reliable Internet connection, this may be a constraint for  users who run out of data, this can be resolved by keeping the data until there is a connection available.\\
+...
+\subsection{Assumptions and Dependencies}
+\section{Specific Requirements}
+\subsection{External Interface Requirements}
+\subsection{Functional Requirements}
+\textbf{R1}The users must be able to download the application via a mobile application store or any other similar service.\\ \textbf{R2}User Registration
+\begin{itemize}	
+	\item \textbf{R2.1}Only users that are registered to the Momentum Multiply database can have register and login to the application.
+	\item \textbf{R2.2}Users will be asked to register the application with they Multiply user name and password, which will then be validated.
+	\item 	\textbf{R2.3}
+\end{itemize}
+\textbf{R3} Beacon Management
+\begin{itemize}	
+	\item \textbf{R3.1}Each beacon must be registered to Multiply participating partner.
+	\item 	\textbf{R3.2}There can be more than one beacon in a particular location provided the beacons are registered to the same Multiply participating partner.
+	\item \textbf{R3.3} The system has to have an identifier for beacons that belong to the same partner and beacons belonging to different partners.
+	\item \textbf{R3.4} 
+\end{itemize}
+\textbf{R4} User Management
+\begin{itemize}	
+	\item \textbf{R4.1}Users will register the application with they Multiply user name and password, all users who register will be must be on the existing Multiply Database. 
+	\item \textbf{R4.2} The administrator can perform CRUD operation on the users and user data. 
+	\item \textbf{R4.3}A Lookup on where and which locations the users where present can be performed.
+	\item \textbf{R4.4} 
+\end{itemize}
+\textbf{R5} The system Administrator should have access to a web portal where they will do user and beacon management. \\
+\textbf{R6} The mobile device must track whenever a user is within the space of a partner, i.e the user must be notified when around a partner. \\
+\textbf{R7} The mobile application must give notifications to the users when the user is around a nearby partner. \\
+\textbf{R8} The mobile application will record the time and track all partner locations visited. \\
+\textbf{R9} The mobile application will have a community where users can compete and interact with one another..\\
+\textbf{R10} A leader-board will be available on the mobile application or users to compete with one another.  \\
+\textbf{R11}
+\subsection{Performance Requirements}
+\subsection{Design Constraints}
+\subsection{Software System Attributes}
+\subsection{Other Requirements}
+\end{document}
