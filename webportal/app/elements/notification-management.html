@@ -1,0 +1,47 @@
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="elements.html">
+
+<!-- <script src="../scripts/bootstrapJs/bootstrap.js"></script>
+<script src="../scripts/bootstrapJs/bootstrap.min.js"></script>
+<script src="../scripts/jquery/jquery-3.2.1.min.js"></script> -->
+
+<dom-module id="notification-management">
+  <template>
+    <style include="shared-styles"></style>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2 class="page-title">Notification Management.</h2>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'notification-management',
+
+        properties: {
+          greeting: {
+            type: Object,
+            value: [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+            ],
+            notify: true
+          }
+        }
+      });
+    })();
+  </script>
+
+</dom-module>

@@ -21,7 +21,7 @@
 
 % define the title
 \author{Panda Inc}
-\title{Catura - Purchase Management System}
+\title{Multiply Active-Days}
 \begin{document}
 \begin{titlepage}
 	
@@ -106,13 +106,13 @@
 		\begin{minipage}{0.4\textwidth}
 			\begin{flushleft} \large
 				\emph{} \\
-				Catura:
+				Multiply:
 			\end{flushleft}
 		\end{minipage}
 		\begin{minipage}{0.4\textwidth}
 			\begin{flushright} \large
 				\emph{} \\
-				Diederik Mostert
+				Philip Kruger
 			\end{flushright}
 		\end{minipage}
 
@@ -129,8 +129,9 @@ The purpose of this software requirements specification document is to give deta
 \subsection{Project Scope}
 The main purpose of this system is monitor or track Multiply members when they visit Multiply partners or particular events or areas. The system will keep track of where and how many times a user has visited these locations and report the data back to the server where it will be stored. Based on the time spent at these locations the user will receive points called 'ActiveDays'. These points will be summed up for a reward policy for the user and the more 'ActiveDays' the better they chances of getting more rewards. 
 \subsection{Definitions,Acronyms and Abbreviations}
-\textbf{R1,R2, R\textit{N}}specifies a requirement \\
-\textbf{UC1,UC2, UC\textit{N}}specifies a use case \\
+\textbf{R1,R2, R\textit{N}} specifies a requirement \\
+\textbf{UC1,UC2, UC\textit{N}} specifies a use case \\
+\textbf{DC1, DC2, DC\textit{N}} specifies a design constraint
 \textbf{User} - A Momentum Multiply registered account holder\\
 \textbf{Administrator} - A user that monitors the system and does maintenance too.
 \subsection{References}
@@ -195,9 +196,32 @@ The mobile application will have to be able to communicate with the server meani
 \textbf{R8} The mobile application will record the time and track all partner locations visited. \\
 \textbf{R9} The mobile application will have a community where users can compete and interact with one another..\\
 \textbf{R10} A leader-board will be available on the mobile application or users to compete with one another.  \\
-\textbf{R11}
+\textbf{R11} The user has the ability to request an active day based on their use of the application.
+\begin{itemize}	
+	\item \textbf{R11.1}The active day is calculated on the server, based on the time spent by the user at partner locations.
+	\item \textbf{R11.2}The user is only allowed to request one active day a day. 	
+	\item \textbf{R11.3} 
+\end{itemize}
+\subsubsection{Use Cases/Service Contract}
+\textbf{UC1}Download Application
+\textbf{UC2}Application Community
+\textbf{UC3}User Management
+\textbf{UC4}Administrator functionality
+\textbf{UC5}Request Active Day
+\textbf{UC6}Beacon Registration
+\textbf{UC7}Beacon removal
+\textbf{UC7}Add User
+\textbf{UC7}Remove User
+\textbf{UC7}Edit user data
+\textbf{UC7}User Notifications
+
 \subsection{Performance Requirements}
 \subsection{Design Constraints}
+\textbf{DC1}The mobile application needs a Internet access, and if the 
 \subsection{Software System Attributes}
+\subsection{Reliability}
+\subsection{Availability}
+\subsection{Security}
+\subsection{Maintainability}
 \subsection{Other Requirements}
 \end{document}

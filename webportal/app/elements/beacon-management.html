@@ -1,0 +1,127 @@
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="elements.html">
+
+<!-- <script src="../scripts/bootstrapJs/bootstrap.js"></script>
+<script src="../scripts/bootstrapJs/bootstrap.min.js"></script>
+<script src="../scripts/jquery/jquery-3.2.1.min.js"></script> -->
+
+<dom-module id="beacon-management">
+  <template>
+    <style include="shared-styles"></style>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2 class="page-title">Beacon Management</h2>
+    <paper-toolbar class="toggleTable">
+      <paper-icon-button icon="expand-more" on-click="_viewBeaconData"></paper-icon-button>
+      <span class="tableTitle">Manage location</span>
+    </paper-toolbar>
+
+    <iron-collapse id="viewBeaconRecords">
+      <div>
+        <paper-material elevation="1" class="paper-font-body2">
+
+          <div role="listbox">
+            <div role="listbox">
+              <template is="dom-repeat" items="{{beaconData}}">
+                <paper-item>{{item.name}}, {{item.location}}</paper-item>
+              </template>
+            </div>
+
+          </div>
+        </paper-material>
+      </div>
+    </iron-collapse>
+
+    <paper-toolbar class="toggleTable">
+      <paper-icon-button icon="expand-more" on-click="_addBeacon"></paper-icon-button>
+      <span class="tableTitle">Add beacon to location</span>
+    </paper-toolbar>
+
+    <iron-collapse id="addBeacon">
+      <div>
+        <paper-material elevation="1" class="paper-font-body2">
+          <form is="iron-form" method="get" action="/" id="basic">
+            <paper-input name="name" label="Beacon Name" required></paper-input>
+            <br>
+            <paper-input  name="beaconPartnerId" label="Beacon Partner Id" required></paper-input>
+            <paper-input  name="id" label="Beacon Id" required></paper-input>
+            <paper-input type="number" name="lat" label="Latitude" required></paper-input>
+            <paper-input type="number" name="long" label="Lonitude" required></paper-input>
+            <!-- <input type="checkbox" name="food" value="pizza" required> I like pizza<br> -->
+            <paper-button raised onclick="_submit(event)">ADD BEACON</paper-button>
+            <paper-button raised onclick="_reset(event)">Reset</paper-button>
+            <!-- <div class="output"></div> -->
+          </form>
+        </paper-material>
+      </div>
+    </iron-collapse>
+
+    <!-- <div id="addBeacon" class="collapse" style="position:relative">
+      <h1>blaaa<h1>
+    </div> -->
+    <paper-toolbar class="toggleTable">
+      <paper-icon-button icon="expand-more" on-click="_viewGrid"></paper-icon-button>
+      <span class="tableTitle">View beacon spatial mapping</span>
+    </paper-toolbar>
+
+    <iron-collapse id="mapView">
+      <div>
+        <paper-material elevation="1" class="paper-font-body2">
+
+        </paper-material>
+      </div>
+    </iron-collapse>
+
+    <!-- <div id="mapView" class="collapse" style="position:relative">
+      <h1>blaaa<h1>
+    </div> -->
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'beacon-management',
+
+        properties: {
+          beaconData: {
+            type: Object,
+            value:[
+              {id:0,name:"Candice",location:"That way", latitude:33.33, longitude:25.99},
+              {id:0,name:"Terry",location:"That way", latitude:55.33, longitude:25.99},
+              {id:0,name:"Fransisca",location:"That way", latitude:58.33, longitude:25.99},
+              {id:0,name:"Bonolo",location:"That way", latitude:12.33, longitude:25.99},
+              {id:0,name:"Kgomotso",location:"That way", latitude:67.33, longitude:25.99},
+              {id:0,name:"Gomolemo",location:"That way", latitude:34.33, longitude:25.99},
+              {id:0,name:"Lerato",location:"That way", latitude:90.33, longitude:25.99},
+              {id:0,name:"Mbali",location:"That way", latitude:11.33, longitude:25.99}
+            ],
+            notify: true
+          }
+        },
+        _viewBeaconData:function()
+        {
+          debugger;
+          this.$.viewBeaconRecords.toggle();
+
+        },
+        _addBeacon:function()
+        {
+          debugger;
+          this.$.addBeacon.toggle();
+        },
+        _viewGrid:function()
+        {
+          debugger;
+          this.$.mapView.toggle();
+        }
+      });
+    })();
+  </script>
+
+</dom-module>
