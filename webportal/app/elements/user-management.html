@@ -1,0 +1,108 @@
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="elements.html">
+
+<!-- <script src="../scripts/bootstrapJs/bootstrap.js"></script> -->
+<!-- <script src="../scripts/bootstrapJs/bootstrap.min.js"></script> -->
+<!-- <script src="../scripts/jquery/jquery-3.2.1.min.js"></script> -->
+
+<dom-module id="user-management">
+  <template>
+    <style include="shared-styles"></style>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2 class="page-title">User Management.</h2>
+    <paper-toolbar class="toggleTable">
+      <paper-icon-button  icon="expand-more" on-click="_openUserData"></paper-icon-button>
+      <span class="tableTitle">User Records</span>
+    </paper-toolbar>
+
+    <iron-collapse id="userRecords">
+      <div>
+        <paper-material elevation="1" class="paper-font-body2">
+
+          <div role="listbox">
+            <template is="dom-repeat" items="{{userData}}">
+              <paper-item>{{item.name}}</paper-item>
+            </template>
+          </div>
+
+
+        </paper-material>
+      </div>
+    </iron-collapse>
+
+
+    <paper-toolbar class="toggleTable">
+      <paper-icon-button icon="expand-more" on-click="_addUser"></paper-icon-button>
+      <span class="tableTitle">Add User to Application Access</span>
+    </paper-toolbar>
+
+    <iron-collapse id="addUser">
+      <div>
+        <paper-material elevation="1" class="paper-font-body2">
+          <form is="iron-form" method="get" action="/" id="basic">
+            <paper-input name="name" label="User Name" required></paper-input>
+            <paper-input name="name" label="User Name" required></paper-input>
+            <br>
+            <paper-input type="password" name="password" label="Password" required></paper-input>
+            <!-- <input type="checkbox" name="food" value="pizza" required> I like pizza<br> -->
+            <paper-button raised onclick="_submit(event)">Save</paper-button>
+            <paper-button raised onclick="_reset(event)">Reset</paper-button>
+            <!-- <div class="output"></div> -->
+          </form>
+        </paper-material>
+      </div>
+    </iron-collapse>
+
+    <!-- <div id="addAser" class="collapse" style="position:relative">
+      <h1>blaaa<h1>
+    </div> -->
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'user-management',
+
+        properties: {
+          greeting: {
+            type: String,
+            value: 'Welcome!',
+            notify: true
+          },
+          userData:{
+            type:Object,
+            value:[
+              {id:0,name:"Tshepo", active:1,activeTime:500},
+              {id:1,name:"Quinton", active:1,activeTime:500},
+              {id:2,name:"Keaton", active:1,activeTime:500},
+              {id:3,name:"Azher", active:1,activeTime:500},
+              {id:4,name:"Neo", active:1,activeTime:500},
+              {id:5,name:"fred", active:1,activeTime:500},
+              {id:6,name:"Keanon", active:1,activeTime:500},
+              {id:7,name:"Hulk", active:1,activeTime:500},
+            ],
+            notify: true
+          }
+        },
+        _openUserData:function()
+        {
+          debugger;
+          this.$.userRecords.toggle();
+        },
+        _addUser:function()
+        {
+          debugger;
+          this.$.addUser.toggle();
+        }
+      });
+    })();
+  </script>
+
+</dom-module>
