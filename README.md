@@ -19,8 +19,7 @@ University of Pretoria - COS 301 Final Project - Developing a multiplatform mobi
 
 ## The Documentation
 - [System Requirements Specification]()
-- [Architectural Requirements]()
+- [Architectural Requirements](https://github.com/Quin10/Panda-Inc/blob/master/documentation/Architectural%20Design%20Document/Latetst%20Version/architectural-design-document.pdf)
 - [User Manual]()
-- [Integration Requirements]()
 - [Test Reports]()
 
