@@ -1,0 +1,24 @@
+\contentsline {paragraph}{Abstract}{1}{section*.1}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Purpose}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Scope}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Definitions and Abbreviations}{3}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Definitions}{3}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.2}Abbreviations}{3}{subsubsection.1.3.2}
+\contentsline {subsection}{\numberline {1.4}References}{3}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Overview}{3}{subsection.1.5}
+\contentsline {section}{\numberline {2}Architectural Design}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Architectural Patterns of ActiveDayz}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Quality Requirements/Non functional Requirements}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Design Requirements}{4}{subsection.2.3}
+\contentsline {section}{\numberline {3}Component Descriptions}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Beacon Module}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Notification Module}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Leader Module}{5}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Community Module}{6}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Users Module}{6}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Social Module}{7}{subsection.3.6}
+\contentsline {section}{\numberline {4}Feasibility and Resource Estimates}{7}{section.4}
+\contentsline {section}{\numberline {5}Technologies Used}{7}{section.5}
+\contentsline {subsection}{\numberline {5.1}Server}{7}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Web develpement}{7}{subsection.5.2}
