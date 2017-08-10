@@ -22,17 +22,17 @@
 \title{Architectural Design Document}
 \begin{document}
 \begin{titlepage}
-	
+
 	\begin{center}
-		% Upper part of the page         
-        \includegraphics[width=0.7\linewidth]{panda.jpg}\\[1cm] 
+		% Upper part of the page
+        \includegraphics[width=0.7\linewidth]{images/panda.jpg}\\[1cm]
 		\textsc{\LARGE Momentum - Multipy Active Dayz App}\\[0.3cm]
 		% Title
 		\rule{\linewidth}{0.5mm} \\[1cm]
 		{ \huge \bfseries Architectural Design Document}\\[0.5cm]
-		\rule{\linewidth}{0.5mm} \\[1cm] 		
-  
-		
+		\rule{\linewidth}{0.5mm} \\[1cm]
+
+
 		\begin{minipage}{0.4\textwidth}
 			\begin{flushleft} \large
 				\emph{} \\
@@ -58,7 +58,7 @@
 				15052592
 			\end{flushright}
 		\end{minipage}
-		
+
 		\begin{minipage}{0.4\textwidth}
 			\begin{flushleft} \large
 				\emph{} \\
@@ -71,7 +71,7 @@
 				14211582
 			\end{flushright}
 		\end{minipage}
-        
+
         \begin{minipage}{0.4\textwidth}
 			\begin{flushleft} \large
 				\emph{} \\
@@ -84,10 +84,10 @@
 				14373018
 			\end{flushright}
 		\end{minipage}
-		
-		\rule{\linewidth}{0.5mm} \\[1cm] 
-		\textsc{\Large Stakeholders}\\[1cm]	
-		
+
+		\rule{\linewidth}{0.5mm} \\[1cm]
+		\textsc{\Large Stakeholders}\\[1cm]
+
 		\begin{minipage}{0.4\textwidth}
 			\begin{flushleft} \large
 				\emph{} \\
@@ -101,14 +101,14 @@
 			\end{flushright}
 		\end{minipage}
 
-		
+
 	\end{center}
 \end{titlepage}
 
 \newpage
 \paragraph{Abstract}\mbox{}\\
 This document serves to describe the architecture used for the ActiveDayz application which is developed for Momentum (Multiply) as part of the Software Engineering Project (COS 301) at the University of Pretoria.\newline
-The document complies with the Architectural Design Document Software Engineering Standard, as set by the European Space Agency. 
+The document complies with the Architectural Design Document Software Engineering Standard, as set by the European Space Agency.
 
 
 
@@ -135,14 +135,14 @@ The proposed system is to be integrated with a non-existing admin web interface.
 \subsection{Overview}
 
 \section{Architectural Design}
-\includegraphics[width=0.7\linewidth]{Integration.jpg}\\[1cm]
+\includegraphics[width=0.7\linewidth]{images/Integration.jpg}\\[1cm]
 \subsection{Architectural Patterns of ActiveDayz}
 \begin{itemize}
 \item Service oriented architecture patterns (Micro services)
 \item Layered architecture patterns
-\item Event-Driven patterns 
+\item Event-Driven patterns
 \end{itemize}
-The first two design patterns were chosen such that the modules within our application would have the as few as possible and also so that we could ensure we achieve low coupling. The event driven pattern will aid in the connecting and ranging of the event driven beacons 
+The first two design patterns were chosen such that the modules within our application would have the as few as possible and also so that we could ensure we achieve low coupling. The event driven pattern will aid in the connecting and ranging of the event driven beacons
 
 \subsection{Quality Requirements/Non functional Requirements}
 \begin{itemize}
@@ -150,14 +150,14 @@ The first two design patterns were chosen such that the modules within our appli
 \item Security
 \item Reliability
 \item Maintainability
-\item Accessibility 
+\item Accessibility
 \end{itemize}
-The above list is the most integral quality requirements for our application and although it is not exhaustive, it encompasses what both our team and the client thought would be necessary for a seamless experience with the application 
+The above list is the most integral quality requirements for our application and although it is not exhaustive, it encompasses what both our team and the client thought would be necessary for a seamless experience with the application
 
 \subsection{Design Requirements}
 \begin{itemize}
 \item Our goal is to design a highly modular system which has minimal dependency between the modules
-\item The system is required to be designed such that if a module needs to be updated/modified or if a module needs to be added or removed. that this can be done with minimal effort 
+\item The system is required to be designed such that if a module needs to be updated/modified or if a module needs to be added or removed. that this can be done with minimal effort
 \end{itemize}
 
 
@@ -175,37 +175,37 @@ To this end the system should be implemented with
 
 \section{Component Descriptions}
 \subsection{Beacon Module}
-\includegraphics[width=0.7\linewidth]{Beacon.png}\\[1cm]
+\includegraphics[width=0.7\linewidth]{images/Beacon.png}\\[1cm]
 \subsection{Notification Module}
-\includegraphics[width=0.7\linewidth]{panda.jpg}\\[1cm]
+\includegraphics[width=0.7\linewidth]{images/Notification.png}\\[1cm]
 \subsection{Leader Module}
-\includegraphics[width=0.7\linewidth]{Leaderboard.png}\\[1cm]
+\includegraphics[width=0.7\linewidth]{images/Leaderboard.png}\\[1cm]
 \subsection{Community Module}
-\includegraphics[width=0.7\linewidth]{Community1.png}\\[1cm]
-\includegraphics[width=0.7\linewidth]{Community2.png}\\[1cm]
+\includegraphics[width=0.7\linewidth]{images/Community1.png}\\[1cm]
+\includegraphics[width=0.7\linewidth]{images/Community2.png}\\[1cm]
 \subsection{Users Module}
-\includegraphics[width=0.7\linewidth]{UserManagement.png}\\[1cm]
+\includegraphics[width=0.7\linewidth]{images/UserManagement.png}\\[1cm]
 \subsection{Social Module}
-\includegraphics[width=0.7\linewidth]{Social.png}\\[1cm]
+\includegraphics[width=0.7\linewidth]{images/Social.png}\\[1cm]
 
 \section{Feasibility and Resource Estimates}
 
 \section{Technologies Used}
-\subparagraph{Server}
-JavaEE eclipse oxygen 
-Jersey restful web service
-Tomcat App server
-Amazon aws
-JSON communication to ensure low coupling
-Maven build automation 
-\subparagraph{Web develpement}
-polymer
-node bower and polymer
-webcomponents
-js
-mysql db
-beacons estimotes
-docker
-wildfly
+\subsection{Server}
+JavaEE eclipse oxygen\\
+Jersey restful web service\\
+Tomcat App server\\
+Amazon aws\\
+JSON communication to ensure low coupling\\
+Maven build automation\\
+\subsection{Web develpement}
+polymer\\
+node bower and polymer\\
+webcomponents\\
+js\\
+mysql db\\
+beacons estimotes\\
+docker\\
+wildfly\\
 
 \end{document}
