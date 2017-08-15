@@ -139,7 +139,7 @@ Testing slows you down on a class-by-class basis, however with experience, your 
 \subsection{Project Outline}
 The main objective of this system is to allow a delivery person into a demarcated area of your house when you are not there. You should be able to give access remotely and monitor the delivery person while you they are in the area.
 
-This document will demonstrate how the functionality of this system was tested by team codeBlox
+This document will demonstrate how the functionality of this system was tested by team Panda
 
 \subsection{Scope}
 The scope of this document is structured as follows. The components that have been identified for testing will be discussed. The tests that have been identified have been drawn from the requirements that have been constructed by the group and the Panda Inc Team. Furthermore, this document aims to outlines the test environment and the risks involved in the testing approaches that will be followed. Assumptions and dependencies of the testing will be discussed due to the environment chosen.
@@ -153,9 +153,15 @@ The scope of this document is structured as follows. The components that have be
 		\item Java (android)
 	\end{itemize}
 	
-	\item Coding Environment
+	\item Coding Environment for Admin Interface
 	\begin{itemize}
 		\item Node package envrionment (npm)\\
+		\item JAVA EE (jdk8)
+	\end{itemize}
+	
+	\item Coding Environment for Android Interface
+	\begin{itemize}
+		\item Android Studio\\
 		\item JAVA EE (jdk8)
 	\end{itemize}
 	
@@ -181,7 +187,6 @@ The scope of this document is structured as follows. The components that have be
 	\item	
 \end{itemize}
 
-all npm node-modules
 \section{Test Items}
 \section{Functional Features to be Tested}
 \begin{itemize}
@@ -208,10 +213,37 @@ all npm node-modules
 \textbf{Input}: first name, last name, id, email, password1, password2 \newline
 \textbf{Outcome}: 200 status and user added to database \newline
 
+\subsection{Test Case 3}
+\textbf{Test case 3}:  \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 4}
+\textbf{Test case 4}:  \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 5}
+\textbf{Test case 5}:  \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 6}
+\textbf{Test case 6}:  \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
 \section{Item Pass Criteria}
 \begin{itemize}
-	\item 
-	
+	\item 	
 \end{itemize}
 
 \section{Test Deliverables}
@@ -233,7 +265,35 @@ all npm node-modules
 	\item server returned status code of 200
 	\item 	Result: Pass
 \end{itemize}
+\subsubsection{Test Case 3 (4.3)}
+\begin{itemize}
+	\item App send time spent at location
+	\item The server should receive an object containing date, time, user and location.
+\end{itemize}
 
+\subsubsection{Test Case 4 (4.4)}
+\begin{itemize}
+	\item Get Active day
+\end{itemize}
+
+\subsubsection{Test Case 5 (4.5)}
+\begin{itemize}
+	\item Adding new beacons to a new location
+\end{itemize}
+
+\subsubsection{Test Case 6 (4.6)}
+\begin{itemize}
+	\item Add multiple beacons to the same location.
+\end{itemize}
+
+\subsubsection{Test Case 7 (4.7)}
+\begin{itemize}
+	\item Remove beacon from a location.
+\end{itemize}
+\subsubsection{Test Case 8 (4.8)}
+\begin{itemize}
+	\item Remove user from system.
+\end{itemize}
 
 \section{Conclusions and Recommendations}
 
