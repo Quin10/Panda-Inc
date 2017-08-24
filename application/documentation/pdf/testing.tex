@@ -1,0 +1,241 @@
+
+ 
+\documentclass[11pt]{article}
+\addtolength{\oddsidemargin}{-1.cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-2cm}
+\addtolength{\textheight}{3.5cm}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage[pdftex]{graphicx}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{cite}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+% define the title
+\author{Panda Inc}
+\title{Multiply Active-Days}
+\begin{document}
+\begin{titlepage}
+	
+	\begin{center}
+		% Upper part of the page         
+        \includegraphics[width=0.7\linewidth]{PandaInc_logo.jpg}\\[1cm] 
+		\textsc{\LARGE Panda Inc}\\[0.3cm]
+		% Title
+		\rule{\linewidth}{0.5mm} \\[1cm]
+		{ \huge \bfseries  System Requirements Specification}\\[0.5cm]
+		\rule{\linewidth}{0.5mm} \\[1cm] 		
+  
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Quinton {Swanepoel}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				15245510
+			\end{flushright}
+		\end{minipage}
+
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+            	\emph{} \\
+				Azhar {Patel}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				15052592
+			\end{flushright}
+		\end{minipage}
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Tshepo Macebo {Malesela}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				14211582
+			\end{flushright}
+		\end{minipage}
+
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Monkeli Fred {Dilapisho}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				15074260
+			\end{flushright}
+		\end{minipage}
+        
+        \begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Keaton {Pennels}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				14373018
+			\end{flushright}
+		\end{minipage}
+		
+		\rule{\linewidth}{0.5mm} \\[1cm] 
+		\textsc{\Large Stakeholders}\\[1cm]	
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{} \\
+				Multiply:
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{} \\
+				Philip Kruger
+			\end{flushright}
+		\end{minipage}
+
+		
+	\end{center}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\section{Introduction}
+\subsection{Purpose for Test}
+\subsubsection{Reducing bugs in new features}
+New tests are developed as we write the code. As a team, believe that doing testing does not result in a fully bug proof system, but does in most cases drastically reduce the number of bugs as we add new code.
+
+\subsubsection{Reducing bugs in existing features}
+With the use of quality tests, the addition of new components or features hardly disturbs the existing features. If a new feature breaks existing functionality, the existing tests fail, which makes it very easy to pinpoint where the errors occurred.
+
+\subsubsection{Tests improve design}
+When writing tests, one is forced to have testable code. We have used a strategy known as TDD(Test driven development) which ensures that you write efficient code that fulfills its basic functionality.
+
+\subsubsection{Testing makes development faster}
+Testing slows you down on a class-by-class basis, however with experience, your overall velocity increases because you need not fear breaking existing code when new features are added. With TDD, we realised that no extra code is written which saves coding hours and increases efficiency.  
+
+\subsection{Project Outline}
+The main objective of this system is to allow a delivery person into a demarcated area of your house when you are not there. You should be able to give access remotely and monitor the delivery person while you they are in the area.
+
+This document will demonstrate how the functionality of this system was tested by team codeBlox
+
+\subsection{Scope}
+The scope of this document is structured as follows. The components that have been identified for testing will be discussed. The tests that have been identified have been drawn from the requirements that have been constructed by the group and the Panda Inc Team. Furthermore, this document aims to outlines the test environment and the risks involved in the testing approaches that will be followed. Assumptions and dependencies of the testing will be discussed due to the environment chosen.
+\subsection{Test Environment}
+\begin{itemize}
+	\item Programming Language
+	\begin{itemize}
+		\item node js
+		\item HTML5 web-components, Polymer
+		\item Java(server)
+		\item Java (android)
+	\end{itemize}
+	
+	\item Coding Environment
+	\begin{itemize}
+		\item Node package envrionment (npm)\\
+		\item JAVA EE (jdk8)
+	\end{itemize}
+	
+	\item Operating system
+	\begin{itemize}
+		\item Linux
+	\end{itemize}
+	
+	\item Hardware
+	\begin{itemize}
+		\item iBeacons
+	\end{itemize}
+\end{itemize}
+
+\subsection{Assumption and Dependencies}
+\begin{itemize}
+	\item assume that user has android device and is able to use it
+	\item assume that the beacons are on and they are lully functional
+\end{itemize}
+
+\subsubsection{Dependencies}
+\begin{itemize}
+	\item	
+\end{itemize}
+
+all npm node-modules
+\section{Test Items}
+\section{Functional Features to be Tested}
+\begin{itemize}
+	\item User registration
+	\item User authentication
+	\item Beacon Registration
+	\item Server-port rgistration
+	\item Push notification (android)
+	\item Get active day
+\end{itemize}
+
+\section{Test Cases}
+\subsection{Test Case 1}
+\textbf{Test case 1}: connection to server \newline
+\textbf{Condition}: open android application \newline
+\textbf{Objective}: check if mobile device connects to server  \newline
+\textbf{Input}: web URL \newline
+\textbf{Outcome}:  200 status \newline
+
+\subsection{Test Case 2}
+\textbf{Test case 2}: add user \newline
+\textbf{Condition}:  user should exist in the Multiply User Database \newline
+\textbf{Objective}: check if user details match those on the database\newline
+\textbf{Input}: first name, last name, id, email, password1, password2 \newline
+\textbf{Outcome}: 200 status and user added to database \newline
+
+\section{Item Pass Criteria}
+\begin{itemize}
+	\item 
+	
+\end{itemize}
+
+\section{Test Deliverables}
+
+\section{Detailed Test Results}
+\subsection{Overview of Test Results}
+
+\subsection{Functional Requirements Test Results}
+
+\subsubsection{Test Case 1 (4.1)}
+\begin{itemize}
+	\item The app should open
+	\item Result: Pass
+\end{itemize}
+
+\subsubsection{Test Case 2 (4.2)}
+\begin{itemize}
+	\item New user was added to the system
+	\item server returned status code of 200
+	\item 	Result: Pass
+\end{itemize}
+
+
+\section{Conclusions and Recommendations}
+
+
+\end{document}
