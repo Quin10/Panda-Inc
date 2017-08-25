@@ -152,7 +152,11 @@ The Momentum Multiply ActiveDays system consists mainly of four parts, these are
 The mobile application will alert the user when they enter a location with a Multiply partner, in the background the application will monitor the time spent by the user at the particular locations. The mobile application uses bluetooth to communicate with the beacons and when the device is within range the user should get an alert informing them of the Multiply partner location they have entered. The mobile application will also communicate with the server to report the time and the location visited. \\\\
 The beacons will be be registered to a Multiply partner and will communicate with the mobile application of the user. Each beacon will have a unique identification to differentiate the different locations and the partner. Since Multiply partner may have more than one beacon registered to them, an identification method for the partner will be on the beacons.\\\\
 \subsubsection{System Interfaces}
-
+The  system interface will include the communication of the mobile device and the server, the web device and the server, and the mobile device and the beacons. 
+Both the web interface and the  mobile application will require the use of similar services from the, server. The mobile application will be used for services such as user validation and authentication, retrieving user charts for the leaders board and the communities within the application. The web interface will also share certain  method requests from the server as the mobile application, these would be the get user(s) to view and perform operations on the users and, the web interface will also support services for beacon management. \\
+The user data will be retrieved from the Multiply user database, this data will be stored in our database and be used as reference to the users in order to not affect Multiply data. Our server will communicate with the multiply server to exchange user data. Our data records will have an extra field for application activation called 'active' to signify that the user has or has not registered the application, and 'active' field the user will or will not be granted use of the mobile application. The system will store all users including the ones that no long use the system for future lookups, and in case the user returns to the application and require they data. \\
+In the web interface all the user activity will be visible but un-editable, the administrator has the ability user events, view the user profile and delete the user if need be. \\
+The web interface will also have functionality to add, remove and edit beacons registered to Multiply Partners, these will be the beacons use by the Multiply partners and these are the same beacons that will register a user at a location. When the user mobile devices sends data to the server to store an event, it will send a particular beacon id used to register the beacon to the location.\\ 
 \subsubsection{User Interfaces}
 The first thing a first-time user of the mobile application will see after opening the application is a login screen. If the user has not registered the application they should be able to do so on the login screen. For non-first-time users, the user will see a profile page.\\
 In the profile page, the user can view details of their ActiveDays and profile information. There will also be a sign-out option on the page if the user wants to log out.\\
@@ -166,8 +170,35 @@ The web interface communicate with the server to request database services to re
 \subsubsection{Communication Interface}
 Communication between the various components of the system is very important. The web web interface will use HTTP/HTTPS protocol to communicate over the Internet. The mobile application will also use HTTP to communicate over the Internet. The mobile  application will also use blue-tooth to communicate with the beacons.
 \subsubsection{Memory}
+
 \subsubsection{Operations}
+For this section the operations performed by the mobile application and the web interface. \\
+For the mobile application, the first operation is the user registration and user login, these operations will verify the user by sending a REST API request to the server to authenticate the user.
+Once the user has logged in they will have the ability to perform actions that will enable then to:-
+\begin{itemize}
+	\item View their accumulated active days
+	\item View leader-boards.
+	\item View your community and global communities. 
+	\item Join communities.
+	\item Create communities
+	\item Challenge communities.
+	\item Invite friends to a community
+	\item Tap to share achievements to social media.
+	\item View user data.
+\end{itemize}
+The web interface will also share the same first operation as the mobile application which is user registration and authentication.\\
+The operations that can be performed on the web interface include:
+\begin{itemize}
+	\item View all active users (i.e users registered to use the application)
+	\item View single user
+	\item Remove/deactivate user.
+	\item View user events and records.
+	\item Add new beacon to new location or location that already exists on the system
+	\item Change beacon registration location.
+	\item Remove beacons from a location.
+\end{itemize}
 \subsubsection{Site Adaptations Requirements}
+
 \subsection{Product Functions}
 The administrative web portal will varies functions, these include create/granting users permission to use the application, removing users from being able to access the application. The administrator can also view all users currently on the system. The administrative web portal also has a beacon management module that allows for addition of beacons, editing of a beacon's registration details and removing beacons from locations.  The administrative web portal also has functionality to edit admin settings. An Extra functionality for the administrator is to be able to send notifications directly from the web portal to a selective set of users on the mobile application. \\
 The mobile application will also have varies functions, the main function of the application is monitor user activity around Multiply partners, this will require the user to accept the use of blue-tooth by the application. \\  
@@ -181,8 +212,10 @@ The mobile application will have to be able to communicate with the server meani
 
 \subsection{Assumptions and Dependencies}
 \begin{itemize}	
-	\item 
-	\item 
+	\item User has active Internet connection. 
+	\item User's mobile device has blue-tooth.
+	\item User's mobile application is Android
+	
 \end{itemize}
 \section{Specific Requirements}
 \subsection{External Interface Requirements}
