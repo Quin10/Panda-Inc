@@ -71,7 +71,11 @@
     <iron-collapse id="mapView">
       <div>
         <paper-material elevation="1" class="paper-font-body2">
-
+          <google-map fit-to-marker api-key="AIzaSyDrcXCN3z3Hs74EzFQ7pjr_P7X6xBmgCQI" zoom="15">
+            <template is="dom-repeat" items="">
+              <google-map-marker latitude="{{item.lat}}" longitude="{{item.long}}" draggable="true"></google-map-marker>
+            </template>
+          </google-map>
         </paper-material>
       </div>
     </iron-collapse>

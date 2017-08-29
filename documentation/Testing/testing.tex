@@ -155,13 +155,18 @@ The scope of this document is structured as follows. The components that have be
 	
 	\item Coding Environment for Admin Interface
 	\begin{itemize}
-		\item Node package envrionment (npm)\\
+		\item Node package envrionment (npm)
 		\item JAVA EE (jdk8)
 	\end{itemize}
 	
 	\item Coding Environment for Android Interface
 	\begin{itemize}
-		\item Android Studio\\
+		\item Android Studio
+		\item JAVA EE (jdk8)
+	\end{itemize}
+	\item Coding Environment for Server
+	\begin{itemize}
+		\item Eclipse.
 		\item JAVA EE (jdk8)
 	\end{itemize}
 	
@@ -193,9 +198,27 @@ The scope of this document is structured as follows. The components that have be
 	\item User registration
 	\item User authentication
 	\item Beacon Registration
-	\item Server-port rgistration
+	\item Server-port registration
 	\item Push notification (android)
 	\item Get active day
+	\item Device connection to beacons
+	\item Mobile connection to server
+	\item Web interface connection to server
+	\item Add User
+	\item Edit User details
+	\item Remove user
+	\item Add beacons.
+	\item Remove Beacons.
+	\item Edit beacon location.
+	\item Get user communities.
+	\item Get global communities
+	\item Get user leader-board
+	\item Get global leader-board
+	\item Get communities leader-board.
+	\item User notification upon location entry.
+	\item Prevention of Login screen, after login 
+	\item Update user details in database 
+	\item Prevention of multiple ActiveDay requests. (on the application)
 \end{itemize}
 
 \section{Test Cases}
@@ -214,32 +237,158 @@ The scope of this document is structured as follows. The components that have be
 \textbf{Outcome}: 200 status and user added to database \newline
 
 \subsection{Test Case 3}
-\textbf{Test case 3}:  \newline
-\textbf{Condition}:  \newline
-\textbf{Objective}:   \newline
-\textbf{Input}:  \newline
-\textbf{Outcome}:   \newline
+\textbf{Test case 3}: authenticate user \newline
+\textbf{Condition}:  username and password must match relative records in user database\newline
+\textbf{Objective}: check if user details match those on the database  \newline
+\textbf{Input}:  username, password\newline
+\textbf{Outcome}:  200 status and user logged in to application \newline
 
 \subsection{Test Case 4}
-\textbf{Test case 4}:  \newline
-\textbf{Condition}:  \newline
-\textbf{Objective}:   \newline
+\textbf{Test case 4}:  notify via push notifications\newline
+\textbf{Condition}:  push notifications should be enabled on user device\newline
+\textbf{Objective}:  Notify user of event \newline
 \textbf{Input}:  \newline
-\textbf{Outcome}:   \newline
+\textbf{Outcome}:  notifications are pushed to users phone \newline
 
 \subsection{Test Case 5}
-\textbf{Test case 5}:  \newline
+\textbf{Test case 5}:User authentication  \newline
+\textbf{Condition}: User must have filled in the user name and password \newline
+\textbf{Objective}: Authenticate the user \newline
+\textbf{Input}: User name and password \newline
+\textbf{Outcome}: Status 200  \newline
+
+\subsection{Test Case 6}
+\textbf{Test case 6}: Beacon Registration \newline
+\textbf{Condition}: Beacon field properties  \newline
+\textbf{Objective}: add beacon to database  \newline
+\textbf{Input}: Beacon database fields \newline
+\textbf{Outcome}:  Status 200 \newline
+
+\subsection{Test Case 7}
+\textbf{Test case 6}: Server-port registration \newline
 \textbf{Condition}:  \newline
 \textbf{Objective}:   \newline
 \textbf{Input}:  \newline
 \textbf{Outcome}:   \newline
 
-\subsection{Test Case 6}
-\textbf{Test case 6}:  \newline
+\subsection{Test Case 8}
+\textbf{Test case 6}: Device connection to beacons \newline
+\textbf{Condition}: Mobile device within beacon range, blue-tooth \newline
+\textbf{Objective}:  \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 9}
+\textbf{Test case 6}: Mobile connection to server \newline
 \textbf{Condition}:  \newline
 \textbf{Objective}:   \newline
 \textbf{Input}:  \newline
 \textbf{Outcome}:   \newline
+
+\subsection{Test Case 10}
+\textbf{Test case 6}: Web interface connection to server \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 11}
+\textbf{Test case 6}: Edit User details \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 12}
+\textbf{Test case 6}: Remove user  \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 13}
+\textbf{Test case 6}: Add beacons. \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 14}
+\textbf{Test case 6}:Remove Beacons.  \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 15}
+\textbf{Test case 6}: Edit beacon location \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 16}
+\textbf{Test case 6}: Get user communities. \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 17}
+\textbf{Test case 6}: Get global communities \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 18}
+\textbf{Test case 6}: Get user leader-board \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 19}
+\textbf{Test case 6}: Get global leader-board \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 20}
+\textbf{Test case 6}: Get communities leader-board. \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 21}
+\textbf{Test case 6}: User notification upon location entry. \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 22}
+\textbf{Test case 6}: Prevention of Login screen, after login  \newline
+\textbf{Condition}:  \newline
+\textbf{Objective}:   \newline
+\textbf{Input}:  \newline
+\textbf{Outcome}:   \newline
+
+\subsection{Test Case 23}
+\textbf{Test case 6}: Update user details in database  \newline
+\textbf{Condition}: User record has been modified \newline
+\textbf{Objective}: Change user data  \newline
+\textbf{Input}: User details \newline
+\textbf{Outcome}:  status 200 \newline
+
+\subsection{Test Case 24}
+\textbf{Test case 6}: Prevention of multiple ActiveDay requests. (on the application) \newline
+\textbf{Condition}: User has already requested an active day \newline
+\textbf{Objective}: Block multiple get active day requests  \newline
+\textbf{Input}: User must have sent initial request \newline
+\textbf{Outcome}: Disabled get active days   \newline
 
 \section{Item Pass Criteria}
 \begin{itemize}

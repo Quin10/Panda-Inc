@@ -209,13 +209,11 @@ There will be two main users that interact and communicate with the system, the 
 \subsection{Constraints}
 The mobile application is constrained by the time to check of the blue-tooth connection, as these will not be the same for each mobile device and therefore there might be seconds elapse from the calculated time spent at a location.\\
 The mobile application will have to be able to communicate with the server meaning there has to be a reliable Internet connection, this may be a constraint for  users who run out of data, this can be resolved by keeping the data until there is a connection available.\\
-
 \subsection{Assumptions and Dependencies}
 \begin{itemize}	
 	\item User has active Internet connection. 
 	\item User's mobile device has blue-tooth.
-	\item User's mobile application is Android
-	
+	\item User's mobile application is Android	
 \end{itemize}
 \section{Specific Requirements}
 \subsection{External Interface Requirements}
@@ -230,8 +228,7 @@ The mobile application will have to be able to communicate with the server meani
 \begin{itemize}	
 	\item \textbf{R3.1}Each beacon must be registered to Multiply participating partner.
 	\item 	\textbf{R3.2}There can be more than one beacon in a particular location provided the beacons are registered to the same Multiply participating partner.
-	\item \textbf{R3.3} The system has to have an identifier for beacons that belong to the same partner and beacons belonging to different partners.
-	
+	\item \textbf{R3.3} The system has to have an identifier for beacons that belong to the same partner and beacons belonging to different partners.	
 \end{itemize}
 \textbf{R4} User Management
 \begin{itemize}	
@@ -252,33 +249,297 @@ The mobile application will have to be able to communicate with the server meani
 	\item \textbf{R11.2}The user is only allowed to request one active day a day. 	
 \end{itemize}
 \subsubsection{Use Cases/Service Contract}
-\textbf{UC1}Download Application\\\\
-\includegraphics[scale=0.5]{./DiagramsTshepo/downloadApp.png}\\\\
-\textbf{UC2}Application Community\\\\
+\textbf{UC1 Download Application}\\
+\includegraphics[scale=0.5]{./DiagramsTshepo/downloadApp.png}\\
+\textbf{Pre-condition: }   \\
+\begin{itemize}
+	\item The user must own a android device
+	\item The user must have a Internet connection.
+\end{itemize}
+\begin{center}
+	\begin{tabular}{ |p{8cm}|p{8cm}| }
+		\hline
+		\textbf{Actor:} User & \textbf{System:} ActiveDays \\
+		\hline
+		  &  \\
+		\hline
+		 &  \\
+		\hline
+		 & \\   
+		\hline
+		  & \\
+		\hline
+	\end{tabular}
+\end{center}		
+\textbf{Post-condition: } \\
+\begin{itemize}
+	\item The Multiply Active Days mobile application will be downloaded onto you mobile device.
+\end{itemize}	
+\textbf{UC2 Application Community}\\\\
 \includegraphics[scale=0.5]{./DiagramsAzhar/Community1.png}\\\\
-\textbf{UC2}Application Challenges\\\\
+\textbf{Pre-condition: }   \\
+\begin{itemize}
+	\item User need to be registered as Multiply application user.
+	\item The user must have a Internet connection.
+\end{itemize}
+\begin{center}
+	\begin{tabular}{ |p{8cm}|p{8cm}| }
+		\hline
+		\textbf{Actor:} User & \textbf{System:} ActiveDays \\
+		\hline
+		&  \\
+		\hline
+		&  \\
+		\hline
+		& \\   
+		\hline
+		& \\
+		\hline
+	\end{tabular}
+\end{center}		
+\textbf{Post-condition: } \\
+\begin{itemize}
+	\item Users can view Communities on the application
+\end{itemize}	
+\textbf{UC3 Application Challenges}\\\\
 \includegraphics[scale=0.5]{./DiagramsAzhar/Community2.png}\\\\
-\textbf{UC3}Application Leadership\\\\
+\textbf{Pre-condition: }   \\
+\begin{itemize}
+	\item User need to be registered as Multiply application user
+	\item The user must have a Internet connection.
+\end{itemize}
+\begin{center}
+	\begin{tabular}{ |p{8cm}|p{8cm}| }
+		\hline
+		\textbf{Actor:} User & \textbf{System:} ActiveDays \\
+		\hline
+		&  \\
+		\hline
+		&  \\
+		\hline
+		& \\   
+		\hline
+		& \\
+		\hline
+	\end{tabular}
+\end{center}		
+\textbf{Post-condition: } \\
+\begin{itemize}
+	\item 
+\end{itemize}
+\textbf{UC4 Application Leadership}\\\\
 \includegraphics[scale=0.5]{./DiagramsAzhar/LeaderBoard.png}\\\\
-\textbf{UC3}User Management\\\\
-\includegraphics[scale=0.5]{./DiagramsTshepo/downloadApp.png}\\\\
-\textbf{UC5}Request Active Day\\\\
-\includegraphics[scale=0.5]{./DiagramsAzhar/Beacon.png}\\\\
-\textbf{UC4}Administrator functionality\\\\
-\textbf{UC6}Beacon Registration\\\\
-\includegraphics[scale=0.5]{./DiagramsTshepo/addBeacon.png}\\
-\\
-\textbf{UC7}Edit Beacon\\\\
-\includegraphics[scale=0.5]{./DiagramsTshepo/editBeacon.png}\\\\
 
-\textbf{UC8} Beacon removal\\\\
+\textbf{Pre-condition: }   \\
+\begin{itemize}
+	\item User need to be registered as Multiply application user
+	\item The user must have a Internet connection.
+\end{itemize}
+\begin{center}
+	\begin{tabular}{ |p{8cm}|p{8cm}| }
+		\hline
+		\textbf{Actor:} User & \textbf{System:} ActiveDays \\
+		\hline
+		&  \\
+		\hline
+		&  \\
+		\hline
+		& \\   
+		\hline
+		& \\
+		\hline
+	\end{tabular}
+\end{center}		
+\textbf{Post-condition: } \\
+\begin{itemize}
+	\item 
+\end{itemize}
+\textbf{UC5 Request Active Day}\\\\
+\includegraphics[scale=0.5]{./DiagramsAzhar/Beacon.png}\\\\
+\textbf{Pre-condition: }   \\
+\begin{itemize}
+	\item User need to be registered as Multiply application user.
+	\item The user must have a Internet connection.
+\end{itemize}
+\begin{center}
+	\begin{tabular}{ |p{8cm}|p{8cm}| }
+		\hline
+		\textbf{Actor:} User & \textbf{System:} ActiveDays \\
+		\hline
+		&  \\
+		\hline
+		&  \\
+		\hline
+		& \\   
+		\hline
+		& \\
+		\hline
+	\end{tabular}
+\end{center}		
+\textbf{Post-condition: } \\
+\begin{itemize}
+	\item 
+\end{itemize}
+\textbf{Administrator functionality}\\\\
+\textbf{UC6 Beacon Registration} \\\\
+\includegraphics[scale=0.5]{./DiagramsTshepo/addBeacon.png}\\
+\textbf{Pre-condition: }   \\
+\begin{itemize}
+	\item User needs to be registered as an Administrator.
+	\item Administrator needs to know location co-ordinates to insert beacon.
+	\item Administrator needs to know the Multiply partner ID.
+	\item The Administrator must have a Internet connection.
+\end{itemize}
+\begin{center}
+	\begin{tabular}{ |p{8cm}|p{8cm}| }
+		\hline
+		\textbf{Actor:} User & \textbf{System:} ActiveDays \\
+		\hline
+		&  \\
+		\hline
+		&  \\
+		\hline
+		& \\   
+		\hline
+		& \\
+		\hline
+	\end{tabular}
+\end{center}		
+\textbf{Post-condition: } \\
+\begin{itemize}
+	\item 
+\end{itemize}
+\textbf{UC7 Edit Beacon}\\\\
+\includegraphics[scale=0.5]{./DiagramsTshepo/editBeacon.png}\\\\
+\textbf{Pre-condition: }   \\
+\begin{itemize}
+	\item User needs to be registered as an Administrator.
+	\item Administrator needs to know the location of the beacon, or a property to allow searching.
+\end{itemize}
+\begin{center}
+	\begin{tabular}{ |p{8cm}|p{8cm}| }
+		\hline
+		\textbf{Actor:} User & \textbf{System:} ActiveDays \\
+		\hline
+		&  \\
+		\hline
+		&  \\
+		\hline
+		& \\   
+		\hline
+		& \\
+		\hline
+	\end{tabular}
+\end{center}		
+\textbf{Post-condition: } \\
+\begin{itemize}
+	\item 
+\end{itemize}
+\textbf{UC8 Beacon removal} \\\\
 \includegraphics[scale=0.5]{./DiagramsTshepo/removeBeacon.png}\\\\
-\textbf{UC9}Add User\\\\
+\textbf{Pre-condition: }   \\
+\begin{itemize}
+	\item User needs to be registered as an Administrator.
+	\item \item Administrator needs to know user id or a user property to allow searching. 
+\end{itemize}
+\begin{center}
+	\begin{tabular}{ |p{8cm}|p{8cm}| }
+		\hline
+		\textbf{Actor:} User & \textbf{System:} ActiveDays \\
+		\hline
+		&  \\
+		\hline
+		&  \\
+		\hline
+		& \\   
+		\hline
+		& \\
+		\hline
+	\end{tabular}
+\end{center}		
+\textbf{Post-condition: } \\
+\begin{itemize}
+	\item 
+\end{itemize}
+\textbf{UC9 Add User}\\\\
 \includegraphics[scale=0.5]{./DiagramsTshepo/addUser.png}\\\\
-\textbf{UC10} Remove User\\\\
+\textbf{Pre-condition: }   \\
+\begin{itemize}
+	\item User needs to be registered as an Administrator.
+	\item Administrator needs to know user id or a user property to allow searching. 
+\end{itemize}
+\begin{center}
+	\begin{tabular}{ |p{8cm}|p{8cm}| }
+		\hline
+		\textbf{Actor:} User & \textbf{System:} ActiveDays \\
+		\hline
+		&  \\
+		\hline
+		&  \\
+		\hline
+		& \\   
+		\hline
+		& \\
+		\hline
+	\end{tabular}
+\end{center}		
+\textbf{Post-condition: } \\
+\begin{itemize}
+	\item 
+\end{itemize}
+\textbf{UC10 Remove User}\\\\
 \includegraphics[scale=0.5]{./DiagramsTshepo/removeUser.png}\\\\
-\textbf{UC11} Edit User \\
+\textbf{Pre-condition: }   \\
+\begin{itemize}
+	\item User needs to be registered as an Administrator.
+	\item Administrator needs to know user id or a user property to allow searching. 
+\end{itemize}
+\begin{center}
+	\begin{tabular}{ |p{8cm}|p{8cm}| }
+		\hline
+		\textbf{Actor:} User & \textbf{System:} ActiveDays \\
+		\hline
+		&  \\
+		\hline
+		&  \\
+		\hline
+		& \\   
+		\hline
+		& \\
+		\hline
+	\end{tabular}
+\end{center}		
+\textbf{Post-condition: } \\
+\begin{itemize}
+	\item The user will be deactivated from using the application.
+\end{itemize}
+\textbf{UC11  Edit User}\\
 \includegraphics[scale=0.5]{./DiagramsTshepo/editUser.png}\\\\
+\textbf{Pre-condition: }   \\
+\begin{itemize}
+	\item User needs to be registered as an Administrator.
+	\item Administrator needs to know user id or a user property to allow searching. 
+\end{itemize}
+\begin{center}
+	\begin{tabular}{ |p{8cm}|p{8cm}| }
+		\hline
+		\textbf{Actor:} User & \textbf{System:} ActiveDays \\
+		\hline
+		&  \\
+		\hline
+		&  \\
+		\hline
+		& \\   
+		\hline
+		& \\
+		\hline
+	\end{tabular}
+\end{center}		
+\textbf{Post-condition: } \\
+\begin{itemize}
+	\item After editing and saving user details will be stored back to the system database
+\end{itemize}
+
 \subsection{Performance Requirements}
 
 \subsection{Design Constraints}
@@ -293,6 +554,8 @@ Users of the system should be able to remember and navigate the system after the
 \subsubsection{Usability}
 The mobile application should be feel like a natural android application experience and should be simple enough for the user to grasp without to much help. The system must have basic instructions that could be made available to the user by a help button perhaps in the mobile application. Everything should be well displayed in order to better user navigation, the reduction of scrolling is an example.
 \subsubsection{Cost}
+The cost inquired for this system will be for the server hosting, and the physical beacons.\\
+The server hosting will be done on the Amazon AWS-EC2 which is a paid service, the beacons have to be purchased at any retail store that sells them at a good price.
 
 \subsubsection{Integrability}
 The system should be easy to integrate. The different parts of the system such as the mobile application and web portal should be able   

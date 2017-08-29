@@ -2,10 +2,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="elements.html">
 
-<!-- <script src="../scripts/bootstrapJs/bootstrap.js"></script> -->
-<!-- <script src="../scripts/bootstrapJs/bootstrap.min.js"></script> -->
-<!-- <script src="../scripts/jquery/jquery-3.2.1.min.js"></script> -->
-
 <dom-module id="user-management">
   <template>
     <style include="shared-styles"></style>
@@ -23,18 +19,27 @@
     <iron-collapse id="userRecords">
       <div>
         <paper-material elevation="1" class="paper-font-body2">
-
           <div role="listbox">
             <template is="dom-repeat" items="{{userData}}">
-              <paper-item>{{item.name}}</paper-item>
+              <paper-item on-click="_openUserProfile">
+                  <label>{{item.name}}</label>
+                  <span style="flex:1"></span>
+                  <iron-icon icon="editor:mode-edit" slot="item-icon"></iron-icon>
+              </paper-item>
             </template>
           </div>
-
-
         </paper-material>
       </div>
     </iron-collapse>
-
+    <!--Modal to Open user profile  -->
+    <paper-dialog id="modal" modal>
+        <paper-icon-button dialog-confirm autofocus icon="icons:clear"></paper-icon-button>
+        <br>
+        <br>
+        <div id="userProfileEdit">
+          <p>User Profile</p>
+        </div>
+    </paper-dialog>
 
     <paper-toolbar class="toggleTable">
       <paper-icon-button icon="expand-more" on-click="_addUser"></paper-icon-button>
@@ -93,13 +98,23 @@
         },
         _openUserData:function()
         {
-          debugger;
+
           this.$.userRecords.toggle();
         },
         _addUser:function()
         {
-          debugger;
+
           this.$.addUser.toggle();
+        },
+        _openUserProfile:function()
+        {
+
+          var _th = this;
+          var currentUserEdit = event.model.item;
+          var userProfileModal = document.getElementById('modal');
+          debugger;
+          modal.open()
+          //here i need to open up the user profile
         }
       });
     })();
